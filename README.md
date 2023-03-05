@@ -4,4 +4,4 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/62c1bb3360cd71acb58f/test_coverage)](https://codeclimate.com/github/LevKrestuaninov/fullstack-javascript-project-44/test_coverage)
 [![asciicast](https://asciinema.org/a/U03pGSy05GIkz1e4NQjtnIAAU.svg)](https://asciinema.org/a/U03pGSy05GIkz1e4NQjtnIAAU)
 [![asciicast](https://asciinema.org/a/iaSzOT5NoVDdiwXplJuc5EltZ.svg)](https://asciinema.org/a/iaSzOT5NoVDdiwXplJuc5EltZ)
-[![asciicast](https://asciinema.org/a/vGSx9TGYRPuVDozevDBxm96Qt.svg)](https://asciinema.org/a/vGSx9TGYRPuVDozevDBxm96Qt)
+[![asciicast](https://asciinema.org/a/CMVMfQGcdtLjJwExkCXjFdlD5.svg)](https://asciinema.org/a/CMVMfQGcdtLjJwExkCXjFdlD5)

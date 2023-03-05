@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const indexFunction =(firstStatement, mainPart) => {
+const indexFunction =(firstStatement, mainPart, correctAnswer, incorrectAnswer) => {
 let name = '';
 const greeting = () => {
     console.log('Welcome to the Brain Games!');
@@ -10,8 +10,16 @@ const greeting = () => {
 };
 greeting ();
 console.log(firstStatement);
-mainPart();
-console.log('Congratulations, ' + name);
+
+for (let i = 0; i < 3; i += 1) {
+    if (mainPart()) {
+        console.log(correctAnswer);
+    } else {
+        console.log(incorrectAnswer + name);
+    }
+}
+
+console.log(`Congratulations, ${name}!`);
 };
 
 export default indexFunction
