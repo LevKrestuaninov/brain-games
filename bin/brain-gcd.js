@@ -25,7 +25,6 @@ const mainPart = () => {
         //const randomNumber2 = getRandomInt(100);
         const nod = NOD(randomNumber);
         console.log(`${'Question:'} ${randomNumber[0]} ${randomNumber[1]}`);
-        console.log(nod);
         const userAnswer = readlineSync.question('Your answer: ');
         if (userAnswer == nod) {
             console.log('Correct!');
