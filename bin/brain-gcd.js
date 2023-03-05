@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import indexFunction from '../../../src/index.js';
+import indexFunction from '../src/index.js';
 
 const firstStatement = 'Find the greatest common divisor of given numbers.';
 const correctAnswer = 'Correct!';
