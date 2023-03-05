@@ -25,9 +25,10 @@ const mainPart = () => {
   const userAnswer = readlineSync.question('Your answer: ');
   if (userAnswer === answer) {
     return 1;
-  }
+  } else {
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'`);
   return 0;
+  }
 };
 
 indexFunction(firstStatement, mainPart, correctAnswer, incorrectAnswer);
