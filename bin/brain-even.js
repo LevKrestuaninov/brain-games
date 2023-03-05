@@ -7,21 +7,19 @@ const incorrectAnswer = "Let's try again, ";
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 const evenOrNot = (num) => {
   if (num % 2 === 0) return 'yes';
-  else return 'no';
-}
+  return 'no';
+};
 
 const mainPart = () => {
-const randomNumber = getRandomInt(100);
-console.log(`Question: ${randomNumber}`);
-const userAnswer = readlineSync.question('Your answer: ');
-const answer = evenOrNot(randomNumber);
-if (userAnswer === answer) {
-  return 1;
-} else {
-console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'`);
-return 0;
-}
-console.log(answer);
+  const randomNumber = getRandomInt(100);
+  console.log(`Question: ${randomNumber}`);
+  const userAnswer = readlineSync.question('Your answer: ');
+  const answer = evenOrNot(randomNumber);
+  if (userAnswer === answer) {
+    return 1;
+  }
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'`);
+  return 0;
 };
 
 indexFunction(firstStatement, mainPart, correctAnswer, incorrectAnswer);
