@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import indexFunction from '../../src/index.js';
+import indexFunction from '../../../src/index.js';
 
 const firstStatement = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const correctAnswer = 'Correct!';
