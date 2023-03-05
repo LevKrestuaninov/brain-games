@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import indexFunction from '../src/index.js';
+import indexFunction from '../../../src/index.js';
 
 const firstStatement = 'What number is missing in the progression?';
 const correctAnswer = 'Correct!';
