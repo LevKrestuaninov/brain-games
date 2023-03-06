@@ -1,2 +1,3 @@
-import prime from "../src/games/prime.js";
+import prime from '../src/games/prime.js';
+
 prime();

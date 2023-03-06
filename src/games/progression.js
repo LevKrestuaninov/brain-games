@@ -41,5 +41,5 @@ const mainPart = () => {
   return 0;
 };
 
-const progression = () =>indexFunction(firstStatement, mainPart, correctAnswer, incorrectAnswer);
+const progression = () => indexFunction(firstStatement, mainPart, correctAnswer, incorrectAnswer);
 export default progression;

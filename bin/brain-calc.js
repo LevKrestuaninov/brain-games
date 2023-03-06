@@ -1,2 +1,3 @@
-import calculator from "../src/games/calculator.js";
+import calculator from '../src/games/calculator.js';
+
 calculator();

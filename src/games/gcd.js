@@ -24,7 +24,7 @@ const mainPart = () => {
   const nod = NOD(randomNumber);
   console.log(`${'Question:'} ${randomNumber[0]} ${randomNumber[1]}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  if (parseInt(userAnswer) === nod) {
+  if (parseInt(userAnswer, 10) === nod) {
     return 1;
   }
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${nod}'`);

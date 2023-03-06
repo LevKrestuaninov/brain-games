@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import indexFunction from '../index.js'
+import indexFunction from '../index.js';
 
 const firstStatement = 'What is the result of the expression?';
 const correctAnswer = 'Correct!';
@@ -45,7 +45,7 @@ const mainPart = () => {
 
   console.log(`Question: ${expression}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  if (parseInt(userAnswer) === answer) {
+  if (parseInt(userAnswer, 10) === answer) {
     return 1;
   }
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'`);
