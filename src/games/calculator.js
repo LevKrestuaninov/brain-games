@@ -40,7 +40,7 @@ const mainPart = () => {
   const randomNumber1 = getRandomInt(100);
   const randomNumber2 = getRandomInt(100);
   const operation = whatMathOperation(getRandomInt(3));
-  const expression = `${randomNumber1}${operation}${randomNumber2}`;
+  const expression = `${randomNumber1} ${operation} ${randomNumber2}`;
   const answer = whatAnswer(operation, randomNumber1, randomNumber2);
 
   console.log(`Question: ${expression}`);
