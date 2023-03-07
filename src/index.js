@@ -16,6 +16,7 @@ const indexFunction = (firstStatement, mainPart, correctAnswer, incorrectAnswer)
       console.log(correctAnswer);
     } else {
       console.log(incorrectAnswer + name);
+      return;
     }
   }
 
