@@ -32,7 +32,7 @@ const mainPart = () => {
   const newArray = [...array];
   const newArrayIndex = getRandomInt(newArray.length);
   newArray[newArrayIndex] = '..';
-  console.log(`${'Question:'} ${newArray}`);
+  console.log(`${'Question:'} ${newArray.join(" ")}`);
   const userAnswer = readlineSync.question('Your answer: ');
   if (parseInt(userAnswer, 10) === array[newArrayIndex]) {
     return 1;
