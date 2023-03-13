@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
 import indexFunction from '../index.js';
+import getRandomInt from '../utils.js';
 
 const firstStatement = 'What is the result of the expression?';
 const correctAnswer = 'Correct!';
 const incorrectAnswer = "Let's try again, ";
 
-const getRandomInt = (max) => Math.floor(Math.random() * max);
 const whatMathOperation = (randomNumber) => {
   switch (randomNumber) {
     case 0:
@@ -37,9 +37,9 @@ const whatAnswer = (operation, randomNumber1, randomNumber2) => {
   return NaN;
 };
 const mainPart = () => {
-  const randomNumber1 = getRandomInt(100);
-  const randomNumber2 = getRandomInt(100);
-  const operation = whatMathOperation(getRandomInt(3));
+  const randomNumber1 = getRandomInt(0, 100);
+  const randomNumber2 = getRandomInt(0, 100);
+  const operation = whatMathOperation(getRandomInt(0, 3));
   const expression = `${randomNumber1} ${operation} ${randomNumber2}`;
   const answer = whatAnswer(operation, randomNumber1, randomNumber2);
 

@@ -1,24 +1,13 @@
 import readlineSync from 'readline-sync';
 import indexFunction from '../index.js';
+import getRandomInt from '../utils.js';
 
 const firstStatement = 'What number is missing in the progression?';
 const correctAnswer = 'Correct!';
 const incorrectAnswer = "Let's try again, ";
-const getRandomInt = (max) => Math.floor(Math.random() * max);
-
-const genLength = () => {
-  let lineLength = 0;
-  while (lineLength < 5) {
-    lineLength = getRandomInt(10);
-  }
-  return lineLength;
-};
 const genArray = (array, lineLength) => {
-  let d = 0;
-  while (d < 1) {
-    d = getRandomInt(10);
-  }
-  let a1 = getRandomInt(100);
+  let d = getRandomInt(1, 10);
+  let a1 = getRandomInt(0, 100);
   for (let i = 0; i < lineLength; i += 1) {
     array.push(a1);
     a1 += d;
@@ -27,10 +16,11 @@ const genArray = (array, lineLength) => {
 };
 
 const mainPart = () => {
+  const arrayLength = getRandomInt(5, 10);
   let array = [];
-  array = genArray(array, genLength());
+  array = genArray(array, arrayLength);
   const newArray = [...array];
-  const newArrayIndex = getRandomInt(newArray.length);
+  const newArrayIndex = getRandomInt(0, newArray.length - 1);
   newArray[newArrayIndex] = '..';
   console.log(`${'Question:'} ${newArray.join(' ')}`);
   const userAnswer = readlineSync.question('Your answer: ');

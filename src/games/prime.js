@@ -1,11 +1,10 @@
 import readlineSync from 'readline-sync';
 import indexFunction from '../index.js';
+import getRandomInt from '../utils.js';
 
 const firstStatement = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const correctAnswer = 'Correct!';
 const incorrectAnswer = "Let's try again, ";
-const getRandomInt = (max) => Math.floor(Math.random() * max);
-
 const primeOrNot = (n) => {
   let i = 2;
   const limit = Math.sqrt(n);
@@ -19,7 +18,7 @@ const primeOrNot = (n) => {
 };
 
 const mainPart = () => {
-  const number = getRandomInt(100);
+  const number = getRandomInt(0, 100);
   const answer = primeOrNot(number);
   console.log(`${'Question:'} ${number}`);
   const userAnswer = readlineSync.question('Your answer: ');
