@@ -2,6 +2,13 @@
 [![Actions Status](https://github.com/LevKrestuaninov/fullstack-javascript-project-44/workflows/hexlet-check/badge.svg)](https://github.com/LevKrestuaninov/fullstack-javascript-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/62c1bb3360cd71acb58f/maintainability)](https://codeclimate.com/github/LevKrestuaninov/fullstack-javascript-project-44/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/62c1bb3360cd71acb58f/test_coverage)](https://codeclimate.com/github/LevKrestuaninov/fullstack-javascript-project-44/test_coverage)
+# Game List:
+1. **brain-even** - game with introduction
+2. **brain-calc** - check a number for evenness
+3. **brain-gcd** - calculate simple expressions
+4. **brain-progression** - calculate the greatest common divisor of 2 numbers
+5. **brain-prime** - check a number for primality
+# Game examples: 
 **brain-even**
 ```
 $ make brain-even
