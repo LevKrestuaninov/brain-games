@@ -6,7 +6,7 @@ const firstStatement = 'What number is missing in the progression?';
 const correctAnswer = 'Correct!';
 const incorrectAnswer = "Let's try again, ";
 const genArray = (array, lineLength) => {
-  let d = getRandomInt(1, 10);
+  const d = getRandomInt(1, 10);
   let a1 = getRandomInt(0, 100);
   for (let i = 0; i < lineLength; i += 1) {
     array.push(a1);
