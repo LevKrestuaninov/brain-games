@@ -39,7 +39,7 @@ const whatAnswer = (operation, randomNumber1, randomNumber2) => {
 const mainPart = () => {
   const randomNumber1 = getRandomInt(0, 100);
   const randomNumber2 = getRandomInt(0, 100);
-  const operation = whatMathOperation(getRandomInt(0, 3));
+  const operation = whatMathOperation(getRandomInt(0, 2));
   const expression = `${randomNumber1} ${operation} ${randomNumber2}`;
   const answer = whatAnswer(operation, randomNumber1, randomNumber2);
 
