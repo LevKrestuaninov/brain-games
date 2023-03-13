@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/LevKrestuaninov/fullstack-javascript-project-44/workflows/hexlet-check/badge.svg)](https://github.com/LevKrestuaninov/fullstack-javascript-project-44/actions)",
+  "description": "Small set of games, that will allow you to develop the skills of elementary mathematics",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
