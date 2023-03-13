@@ -8,6 +8,8 @@
 3. **brain-gcd** - calculate simple expressions
 4. **brain-progression** - calculate the greatest common divisor of 2 numbers
 5. **brain-prime** - check a number for primality
+# How to install and play:
+[![asciicast](https://asciinema.org/a/ts9GwChHUxHxs6WVCUq8QGqz5.svg)](https://asciinema.org/a/ts9GwChHUxHxs6WVCUq8QGqz5)
 # Game examples: 
 **brain-even**
 ```
