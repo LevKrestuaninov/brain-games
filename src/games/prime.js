@@ -22,7 +22,7 @@ const mainPart = () => {
   const answer = primeOrNot(number);
   console.log(`${'Question:'} ${number}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  if (userAnswer === answer) {
+  if (userAnswer.toString() === answer) {
     return 1;
   }
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'`);
