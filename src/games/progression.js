@@ -20,7 +20,7 @@ const getDate = () => {
   const newArray = [...array];
   const newArrayIndex = getRandomInt(0, newArray.length - 1);
   newArray[newArrayIndex] = '..';
-  const question = `${newArray}`;
+  const question = `${newArray.join(' ')}`;
   const correctAnswer = `${array[newArrayIndex]}`;
   return [question, correctAnswer];
 };
