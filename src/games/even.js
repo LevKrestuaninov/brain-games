@@ -1,26 +1,16 @@
-import readlineSync from 'readline-sync';
-import indexFunction from '../index.js';
+import runEngine from '../index.js';
 import getRandomInt from '../utils.js';
 
-const firstStatement = 'Answer "yes" if the number is even, otherwise answer "no".';
-const correctAnswer = 'Correct!';
-const incorrectAnswer = "Let's try again, ";
-const evenOrNot = (num) => {
-  if (num % 2 === 0) return 'yes';
-  return 'no';
+const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const evenOrNot = (num) => num % 2 === 0;
+
+const getData = () => {
+  const number = getRandomInt(1, 10);
+  const question = `${number}`;
+  const correctAnswer = evenOrNot(number) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
-const mainPart = () => {
-  const randomNumber = getRandomInt(0, 100);
-  console.log(`Question: ${randomNumber}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-  const answer = evenOrNot(randomNumber);
-  if (userAnswer === answer) {
-    return 1;
-  }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'`);
-  return 0;
-};
-
-const even = () => indexFunction(firstStatement, mainPart, correctAnswer, incorrectAnswer);
+const even = () => runEngine(gameRules, getData);
 export default even;
