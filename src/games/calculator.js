@@ -1,34 +1,18 @@
-import readlineSync from 'readline-sync';
-import indexFunction from '../index.js';
+import runEngine from '../index.js';
 import getRandomInt from '../utils.js';
 
-const firstStatement = 'What is the result of the expression?';
-const correctAnswer = 'Correct!';
-const incorrectAnswer = "Let's try again, ";
+const gameRules = 'What is the result of the expression?';
 
-const whatMathOperation = (randomNumber) => {
-  switch (randomNumber) {
-    case 0:
-      return '+';
-    case 1:
-      return '-';
-    case 2:
-      return '*';
-    default:
-      break;
-  }
-  return NaN;
-};
-const whatAnswer = (operation, randomNumber1, randomNumber2) => {
+const doMathOperation = (operation, randomNumber1, randomNumber2) => {
   let res = 0;
   switch (operation) {
-    case '+':
+    case 0:
       res = randomNumber1 + randomNumber2;
       return res;
-    case '-':
+    case 1:
       res = randomNumber1 - randomNumber2;
       return res;
-    case '*':
+    case 2:
       res = randomNumber1 * randomNumber2;
       return res;
     default:
@@ -36,22 +20,17 @@ const whatAnswer = (operation, randomNumber1, randomNumber2) => {
   }
   return NaN;
 };
-const mainPart = () => {
-  const randomNumber1 = getRandomInt(0, 100);
-  const randomNumber2 = getRandomInt(0, 100);
-  const operation = whatMathOperation(getRandomInt(0, 2));
-  const expression = `${randomNumber1} ${operation} ${randomNumber2}`;
-  const answer = whatAnswer(operation, randomNumber1, randomNumber2);
 
-  console.log(`Question: ${expression}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-  if (parseInt(userAnswer, 10) === answer) {
-    return 1;
-  }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'`);
-  return 0;
+const getData = () => {
+  const operations = ['+', '-', '*'];
+  const randomNumber1 = getRandomInt(0, 10);
+  const randomNumber2 = getRandomInt(0, 10);
+  const operation = getRandomInt(0, 2);
+  const question = `${randomNumber1} ${operations[operation]} ${randomNumber2}`;
+  const correctAnswer = `${doMathOperation(operation, randomNumber1, randomNumber2)}`;
+  return [question, correctAnswer];
 };
 
-const calculator = () => indexFunction(firstStatement, mainPart, correctAnswer, incorrectAnswer);
+const calculator = () => runEngine(gameRules, getData);
 
 export default calculator;
