@@ -1,33 +1,26 @@
-import readlineSync from 'readline-sync';
-import indexFunction from '../index.js';
+import runEngine from '../index.js';
 import getRandomInt from '../utils.js';
 
-const firstStatement = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const correctAnswer = 'Correct!';
-const incorrectAnswer = "Let's try again, ";
+const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const primeOrNot = (n) => {
   let i = 2;
   const limit = Math.sqrt(n);
   while (i <= limit) {
     if (n % i === 0) {
-      return 'no';
+      return false;
     }
     i += 1;
   }
-  return 'yes';
+  return true;
 };
 
-const mainPart = () => {
-  const number = getRandomInt(0, 100);
-  const answer = primeOrNot(number);
-  console.log(`${'Question:'} ${number}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-  if (userAnswer.toString() === answer) {
-    return 1;
-  }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'`);
-  return 0;
+const getData = () => {
+  const number = getRandomInt(1, 10);
+  const question = `${number}`;
+  const correctAnswer = primeOrNot(number) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
-const prime = () => indexFunction(firstStatement, mainPart, correctAnswer, incorrectAnswer);
+const prime = () => runEngine(gameRules, getData);
 export default prime;
