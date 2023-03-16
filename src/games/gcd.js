@@ -1,35 +1,22 @@
-import readlineSync from 'readline-sync';
-import indexFunction from '../index.js';
+import runEngine from '../index.js';
 import getRandomInt from '../utils.js';
 
-const firstStatement = 'Find the greatest common divisor of given numbers.';
-const correctAnswer = 'Correct!';
-const incorrectAnswer = "Let's try again, ";
-const NOD = (A) => {
-  const n = A.length; let
-    x = Math.abs(A[0]);
-  for (let i = 1; i < n; i += 1) {
-    let y = Math.abs(A[i]);
-    while (x && y) {
-      if (x > y) x %= y;
-      else y %= x;
-    }
-    x += y;
+const gameRules = 'Find the greatest common divisor of given numbers.';
+
+const GCD = (a, b) => {
+  if (b !== 0) {
+    return gcd(b, a % b);
   }
-  return x;
+  return a;
 };
 
-const mainPart = () => {
-  const randomNumber = [getRandomInt(0, 100), getRandomInt(0, 100)];
-  const nod = NOD(randomNumber);
-  console.log(`${'Question:'} ${randomNumber[0]} ${randomNumber[1]}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-  if (parseInt(userAnswer, 10) === nod) {
-    return 1;
-  }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${nod}'`);
-  return 0;
+const getDate = () => {
+  const randomNum1 = getRandomInt(1, 100);
+  const randomNum2 = getRandomInt(1, 100);
+  const question = `${randomNum1} ${randomNum2}`;
+  const correctAnswer = `${gcd(randomNum1, randomNum2)}`;
+  return [question, correctAnswer];
 };
 
-const gcd = () => indexFunction(firstStatement, mainPart, correctAnswer, incorrectAnswer);
-export default gcd;
+const gcd = () => runEngine(gameRules, getDate);
+export default even;
