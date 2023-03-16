@@ -1,10 +1,8 @@
-import readlineSync from 'readline-sync';
-import indexFunction from '../index.js';
+import runEngine from '../index.js';
 import getRandomInt from '../utils.js';
 
-const firstStatement = 'What number is missing in the progression?';
-const correctAnswer = 'Correct!';
-const incorrectAnswer = "Let's try again, ";
+const gameRules = 'What number is missing in the progression?';
+
 const genArray = (array, lineLength) => {
   const d = getRandomInt(1, 10);
   let a1 = getRandomInt(0, 100);
@@ -15,21 +13,17 @@ const genArray = (array, lineLength) => {
   return array;
 };
 
-const mainPart = () => {
+const getDate = () => {
   const arrayLength = getRandomInt(5, 10);
   let array = [];
   array = genArray(array, arrayLength);
   const newArray = [...array];
   const newArrayIndex = getRandomInt(0, newArray.length - 1);
   newArray[newArrayIndex] = '..';
-  console.log(`${'Question:'} ${newArray.join(' ')}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-  if (parseInt(userAnswer, 10) === array[newArrayIndex]) {
-    return 1;
-  }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${array[newArrayIndex]}'`);
-  return 0;
+  const question = `${newArray}`;
+  const correctAnswer = `${array[newArrayIndex]}`;
+  return [question, correctAnswer];
 };
 
-const progression = () => indexFunction(firstStatement, mainPart, correctAnswer, incorrectAnswer);
+const progression = () => runEngine(gameRules, getDate);
 export default progression;
