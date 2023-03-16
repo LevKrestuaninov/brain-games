@@ -3,14 +3,14 @@ import getRandomInt from '../utils.js';
 
 const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const primeOrNot = (n) => {
-  let i = 2;
-  const limit = Math.sqrt(n);
-  while (i <= limit) {
-    if (n % i === 0) {
+const primeOrNot = (number) => {
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
+    if (number % i === 0) {
       return false;
     }
-    i += 1;
   }
   return true;
 };
