@@ -25,5 +25,4 @@ const getDate = () => {
   return [question, correctAnswer];
 };
 
-const progression = () => runEngine(gameRules, getDate);
-export default progression;
+export default () => runEngine(gameRules, getDate);

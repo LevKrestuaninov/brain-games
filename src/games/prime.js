@@ -22,5 +22,4 @@ const getData = () => {
   return [question, correctAnswer];
 };
 
-const prime = () => runEngine(gameRules, getData);
-export default prime;
+export default () => runEngine(gameRules, getData);

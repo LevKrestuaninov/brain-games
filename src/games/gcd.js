@@ -18,5 +18,4 @@ const getDate = () => {
   return [question, correctAnswer];
 };
 
-const gcd = () => runEngine(gameRules, getDate);
-export default gcd;
+export default () => runEngine(gameRules, getDate);
