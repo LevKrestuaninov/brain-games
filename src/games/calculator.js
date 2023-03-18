@@ -16,15 +16,14 @@ const doMathOperation = (operation, num1, num2) => {
       res = num1 * num2;
       return res;
     default:
-      throw new Error(`Operator ${operator} - is incorrect!`)
+      throw new Error(`Operator ${operation} - is incorrect!`);
   }
-  return NaN;
 };
 
-const getRandomOperator = () => { 
-  const operators = ['+', '-', '*']; 
-  return operators [getRandomInt(0, operators.length - 1)] 
-}
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  return operators[getRandomInt(0, operators.length - 1)];
+};
 
 const getData = () => {
   const randomNumber1 = getRandomInt(0, 10);
