@@ -10,7 +10,7 @@ const GCD = (a, b) => {
   return a;
 };
 
-const getDate = () => {
+const generateRound = () => {
   const randomNum1 = getRandomInt(1, 100);
   const randomNum2 = getRandomInt(1, 100);
   const question = `${randomNum1} ${randomNum2}`;
@@ -18,4 +18,4 @@ const getDate = () => {
   return [question, correctAnswer];
 };
 
-export default () => runEngine(gameRules, getDate);
+export default () => runEngine(gameRules, generateRound);

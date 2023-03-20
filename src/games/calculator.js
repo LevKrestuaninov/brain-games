@@ -25,13 +25,13 @@ const getRandomOperator = () => {
   return operators[getRandomInt(0, operators.length - 1)];
 };
 
-const getData = () => {
-  const randomNumber1 = getRandomInt(0, 10);
-  const randomNumber2 = getRandomInt(0, 10);
+const generateRound = () => {
+  const randomNumber1 = getRandomInt(0, 100);
+  const randomNumber2 = getRandomInt(0, 100);
   const operation = getRandomOperator();
   const question = `${randomNumber1} ${operation} ${randomNumber2}`;
   const correctAnswer = `${doMathOperation(operation, randomNumber1, randomNumber2)}`;
   return [question, correctAnswer];
 };
 
-export default () => runEngine(gameRules, getData);
+export default () => runEngine(gameRules, generateRound);

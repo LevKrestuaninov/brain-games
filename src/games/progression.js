@@ -13,7 +13,7 @@ const generateProgression  = (a1, d, length) => {
   return progression;
 };
 
-const getDate = () => {
+const generateRound = () => {
   const arrayLength = getRandomInt(5, 10);
   const d = getRandomInt(1, 10);
   const a1 = getRandomInt(0, 100);
@@ -26,4 +26,4 @@ const getDate = () => {
   return [question, correctAnswer];
 };
 
-export default () => runEngine(gameRules, getDate);
+export default () => runEngine(gameRules, generateRound);

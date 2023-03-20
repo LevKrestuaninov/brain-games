@@ -15,11 +15,11 @@ const primeOrNot = (number) => {
   return true;
 };
 
-const getData = () => {
+const generateRound = () => {
   const number = getRandomInt(1, 10);
   const question = `${number}`;
   const correctAnswer = primeOrNot(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
-export default () => runEngine(gameRules, getData);
+export default () => runEngine(gameRules, generateRound);
