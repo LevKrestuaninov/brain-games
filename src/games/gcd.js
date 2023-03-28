@@ -11,10 +11,10 @@ const GCD = (a, b) => {
 };
 
 const generateRound = () => {
-  const randomNum1 = getRandomInt(1, 100);
-  const randomNum2 = getRandomInt(1, 100);
-  const question = `${randomNum1} ${randomNum2}`;
-  const correctAnswer = `${GCD(randomNum1, randomNum2)}`;
+  const number1 = getRandomInt(1, 100);
+  const number2 = getRandomInt(1, 100);
+  const question = `${number1} ${number2}`;
+  const correctAnswer = `${GCD(number1, number2)}`;
   return [question, correctAnswer];
 };
 

@@ -3,7 +3,7 @@ import getRandomInt from '../utils.js';
 
 const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const primeOrNot = (number) => {
+const isPrime = (number) => {
   if (number < 2) {
     return false;
   }
@@ -16,9 +16,9 @@ const primeOrNot = (number) => {
 };
 
 const generateRound = () => {
-  const number = getRandomInt(1, 10);
+  const number = getRandomInt(1, 100);
   const question = `${number}`;
-  const correctAnswer = primeOrNot(number) ? 'yes' : 'no';
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
